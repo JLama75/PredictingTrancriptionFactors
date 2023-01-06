@@ -1,0 +1,7 @@
+#I use tfTarget package to find differentially expressed genes from bigwig files generated from leChro-seq data.
+
+source $HOME/miniconda3/bin/activate/renv
+
+bash run_tfTarget.bsh -bigWig.path /workdir/jl3285 -query ChRO_P_R1_plus.bw ChRO_P_R1_minus.bw ChRO_P_R2_plus.bw ChRO_P_R2_minus.bw ChRO_P_R3_plus.bw ChRO_P_R3_minus.bw ChRO_P_R4_plus.bw ChRO_P_R4_minus.bw /
+-control ChRO_LZ_R1_plus.bw ChRO_LZ_R1_minus.bw ChRO_LZ_R2_plus.bw ChRO_LZ_R2_minus.bw ChRO_LZ_R3_plus.bw ChRO_LZ_R3_minus.bw ChRO_LZ_R4_plus.bw ChRO_LZ_R4_minus.bw  /
+-prefix P.vs.LZ -TRE.path /workdir/jl3285/P_LZ_merged.dREG.bed -gene.path /workdir/jl3285/gencode.vM31.annotation.bed -2bit.path /workdir/jl3285/mm10.2bit -tfs.path Mus_musculus.tfs.rdata -deseq -ncores 4
