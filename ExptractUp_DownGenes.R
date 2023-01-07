@@ -1,4 +1,5 @@
-#Pachytene spermatocyte vs. Leptotene/Zygotene spermatocyte
+#Here we extract the significantly upregulated and downregulated genes 
+#Differentially expressed genes between Pachytene spermatocyte vs. Leptotene/Zygotene spermatocyte
 
 library(dplyr)
 df1 <- read.table("P.vs.LZ.gene.deseq.txt", header=TRUE)
